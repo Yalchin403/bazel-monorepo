@@ -1,0 +1,14 @@
+py_library(
+    name = "calculator",
+    srcs = ["src/calculator.py"],
+    visibility = ["//visibility:public"],
+)
+
+py_test(
+    name = "all_tests",
+    srcs = glob(["tests/*.py"]),
+    deps = [
+        ":calculator",
+    ],
+    main = "tests/test_runner.py",
+)

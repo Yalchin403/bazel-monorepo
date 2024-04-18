@@ -1,0 +1,7 @@
+
+genrule(
+    name = "projectBRule",
+    srcs = [],
+    outs = ["bar.txt"],
+    cmd = "sleep 5 && echo 'ProjectB build' > $@",
+)
